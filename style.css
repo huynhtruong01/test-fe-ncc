@@ -1,0 +1,188 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+
+p {
+    line-height: 18.75px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container {
+    position: relative;
+    display: flex;
+}
+
+.btn__sidebar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 12px;
+    outline: none;
+    border: none;
+}
+
+/* -------------------- SIDEBAR ---------------------------- */
+
+.sidebar {
+    min-width: 150px;
+    background-color: #191718;
+}
+
+.sidebar.active {
+    position: fixed;
+    display: block;
+    z-index: 10;
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-list li {
+    padding: 14px 16px;
+    border-bottom: 1px solid #aaaaaa;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-list li a {
+    color: #aaaaaa;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-list li:first-child a {
+    color: #fff;
+}
+
+.nav-list li:hover {
+    background-color: #5c5c5c;
+}
+
+.nav-list li:hover a {
+    color: #fff;
+}
+
+/* --------------------------------- CONTENT ------------------------- */
+.main {
+    flex: 1 1 0;
+}
+
+.content {
+    padding: 20px;
+    padding-bottom: 183px;
+    border-bottom: 1px solid #dedede;
+}
+
+.content__logo {
+    width: 40%;
+    margin: auto;
+}
+
+.content__container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.content__logo {
+    margin-bottom: 30px;
+}
+
+.content__main {
+    background-color: #efefef;
+    padding: 38px 0;
+    margin-bottom: 40px;
+}
+
+.content__main h4 {
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+.content__main p {
+    width: 68%;
+    margin: auto;
+}
+
+.content__list {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.content__item {
+    flex: 1;
+    text-align: left;
+}
+
+.content__item h3 {
+    margin-bottom: 18px;
+    font-size: 24px;
+}
+
+.content__item--main img {
+    float: left;
+    margin-right: 16px;
+}
+
+/* ------------------ FOOTER -------------------------- */
+.footer {
+    width: 100%;
+}
+
+.footer p {
+    width: 70%;
+    margin: 30px auto;
+    color: #3e3e3e;
+}
+
+/* ------------------------ RESPONSIVE ---------------------------- */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .content__item {
+        width: calc(100% / 2 - 50px);
+        flex: none;
+    }
+
+    .content__item img {
+        margin-bottom: 20px;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content__logo {
+        width: 40%;
+    }
+
+    .content__item {
+        width: 100%;
+        flex: none;
+    }
+
+    .content__item img {
+        margin-bottom: 20px;
+        float: none;
+    }
+}
